@@ -11,9 +11,12 @@ public class MyClass
         var t2 = mc.Linger(2);
         var t1 = mc.Linger(1);
 
-        await t3;
-        await t2;
         await t1;
+        Console.WriteLine($"{DateTime.Now} 1 completed");
+        await t3;
+        Console.WriteLine($"{DateTime.Now} 3 completed");
+        await t2;
+        Console.WriteLine($"{DateTime.Now} 2 completed");
 	}
 }
 
